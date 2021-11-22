@@ -30,6 +30,9 @@ app.get('*', async (req, res) => {
     else if (url === '/api/youtube') {
         return res.status(200).json(videos);
     }
+    else if (/\./.test(url) && !url.includes('index.html')) {
+        file = `./build${url}`;
+    }
     else {
         if (pages.includes(url)) {
             file = `./build/index.html`

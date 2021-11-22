@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="15">
+    <defs>
+        <mask id="mask" x="0" y="0" width="360" height="15" >
+            <rect width="360" height="15" fill="white"/>
+            <ellipse cx="180" cy="25" rx="200" ry="25" fill="black"/>
+        </mask>
+    </defs>
+    <rect x="0" y="0" width="360" height="15" fill="white" mask="url(#mask)"/>
+</svg>

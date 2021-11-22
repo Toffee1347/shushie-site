@@ -21,7 +21,7 @@ body:hover::-webkit-scrollbar-thumb {
 }
 
 body {
-    background: linear-gradient(315deg, #f7e3a2 0%, #cea426 100%) fixed;
+    background: linear-gradient(315deg, #DBD21D 0%, #cea426 100%) fixed;
     overflow: hidden;
 }
 
@@ -188,7 +188,7 @@ a {
 }
 .curve img {
     position: absolute;
-    bottom: 0;
+    left: 0;
     width: 100%;
     z-index: -10;
 }
@@ -196,4 +196,14 @@ a {
 .intro {
     background: white;
     padding: 20px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 40px;
+}
+.intro-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    text-align: center;
 }
