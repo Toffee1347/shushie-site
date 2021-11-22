@@ -1,7 +1,8 @@
 import express from 'express';
 import http from 'http';
 import fs from 'fs';
-import { shushieChannel } from './twitch.js';
+import { channel } from './twitch.js';
+import { videos } from './youtube.js';
 
 const app = express();
 export const server = http.createServer(app);
@@ -23,8 +24,11 @@ app.get('*', async (req, res) => {
     let url = req.url.split('?')[0];
     let file;
 
-    if (url === '/utils.json') {
-        return res.status(200).json(shushieChannel);
+    if (url === '/api/twitch') {
+        return res.status(200).json(channel);
+    }
+    else if (url === '/api/youtube') {
+        return res.status(200).json(videos);
     }
     else {
         if (pages.includes(url)) {

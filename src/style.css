@@ -1,0 +1,199 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgba(80, 80, 80, 0);
+    border-radius: 10px;
+}
+body:hover::-webkit-scrollbar-thumb {
+    background: rgba(80, 80, 80, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(50, 50, 50, 0.5);
+}
+::-webkit-scrollbar-thumb:active {
+    background: rgba(20, 20, 20, 0.5);
+}
+
+body {
+    background: linear-gradient(315deg, #f7e3a2 0%, #cea426 100%) fixed;
+    overflow: hidden;
+}
+
+.home-main-image {
+    width: 400px;
+}
+
+.notif-live {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    border: solid grey 2px;
+    z-index: 99999;
+    max-width: 400px;
+    max-height: 20vw;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+.center-inner {
+    display: inline-block;
+}
+
+.social-buttons {
+    display: block;
+    position: relative;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.social-buttons img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+}
+.social-buttons::after {
+    content: '';
+    width: 1px;
+    height: calc(100% - 6px);
+    background: rgba(10, 10, 10, 0.4);
+    position: absolute;
+    top: 3px;
+    left: 42px;
+}
+.social-buttons-text {
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 5px;
+    padding-left: 45px;
+}
+.socials a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.twitter-button {
+    background: #1DA1F2;
+}
+.twitter-button:hover {
+    background: #177bb9;
+}
+.twitter-button:active {
+    background: #126497;
+}
+
+.youtube-button {
+    background: #FF0000;
+}
+.youtube-button:hover {
+    background: #bb0000;
+}
+.youtube-button:active {
+    background: #8f0000;
+}
+
+.instagram-button {
+    background: #E1306C;
+}
+.instagram-button:hover {
+    background: #a82350;
+}
+.instagram-button:active {
+    background: #972048;
+}
+
+.twitch-button {
+    background: #9146FF;
+}
+.twitch-button:hover {
+    background: #7137c9;
+}
+.twitch-button:active {
+    background: #512791;
+}
+
+a {
+    color: black;
+}
+
+@media only screen and (max-width: 899px) {
+    .notif-live {
+        max-width: unset;
+        width: calc(100vw - 20px);
+    }
+    .curve img {
+        height: 10vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .home-main-image {
+        width: 70vw;
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.curve {
+    position: relative;
+}
+.curve-arrow {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    font-size: xx-large;
+    animation: up-down 1s infinite ease-in-out;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+.curve img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: -10;
+}
+
+.intro {
+    background: white;
+    padding: 20px;
+}

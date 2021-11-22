@@ -5,7 +5,7 @@ const twitch = new TwitchApi.default({
     client_secret: process.env.TWITCH_CLIENT_SECRET,
 });
 
-export let shushieChannel = {
+export let channel = {
     live: false,
     stats: {
         viewers: 0,
@@ -14,22 +14,24 @@ export let shushieChannel = {
 }
 
 async function run() {
-    const channel = await twitch.getStreams({channel: 'rocketleague'});
-    const stream = channel.data[0];
+    const twitchChannel = await twitch.getStreams({channel: 'Shushie16'});
+    const stream = twitchChannel.data[0];
     if (stream === undefined) {
-        shushieChannel = {
+        channel = {
             live: false,
             stats: {
                 viewers: 0,
                 title: '',
+                image: ''
             },
         }
         return;
     }
     if (stream.type === 'live') {
-        shushieChannel.live = true;
-        shushieChannel.stats.viewers = stream.viewer_count;
-        shushieChannel.stats.title = stream.title;
+        channel.live = true;
+        channel.stats.viewers = stream.viewer_count;
+        channel.stats.title = stream.title;
+        channel.stats.image = stream.getThumbnailUrl();
     }
 }
 

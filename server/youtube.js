@@ -3,7 +3,16 @@ import fetch from "node-fetch";
 export let videos = [];
 
 async function fetchVideos() {
-    const channel = (await fetch(`https://www.googleapis.com/youtube/v3/channels?key=${process.env.YOUTUBE_API_KEY}&id=UCFphCAt9jZfJu-txxUjko2A&part=contentDetails`)).json();
-    const playlist = (await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?key=${process.env.YOUTUBE_API_KEY}&playlistId=${channel.items[0].contentDetails.relatedPlaylists.uploads}&part=snippet&maxResults=50`)).json();
-    
+    const playlist = await (await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?key=${process.env.YOUTUBE_API_KEY}&playlistId=UUFphCAt9jZfJu-txxUjko2A&part=snippet&maxResults=50`)).json();
+    videos = [];
+    playlist.items.forEach(item => {
+        videos.push({
+            title: item.snippet.title,
+            id: item.snippet.resourceId.videoId,
+            thumbnail: item.snippet.thumbnails.medium.url
+        });
+    });
 }
+
+fetchVideos();
+setInterval(fetchVideos, 60000);
