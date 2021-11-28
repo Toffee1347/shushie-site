@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import Curve from "./Curve";
+import Curve from "../../compnents/Curve";
 
 export default class Intro extends React.Component {
     render() {
@@ -11,7 +11,7 @@ export default class Intro extends React.Component {
                     <Grid container spacing={3}>
                         <Grid item xs={0} md={2}/>
                         <Grid item xs={12} md={4}>
-                            <img className="home-main-image" alt="logo" src="/static/img/profile.png"/>
+                            <img className="home-main-image curved-corners" style={{width: '80%'}} alt="logo" src="/static/img/profile.png"/>
                         </Grid>
                         <Grid item xs={12} md={4}>
                             <div className="intro-text">

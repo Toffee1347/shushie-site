@@ -8,7 +8,7 @@ export default function Socials() {
                     <a href="https://twitch.shushie16.com" target="_blank" rel="noreferrer">
                         <div className="social-buttons twitch-button">
                             <div className="social-buttons-text">
-                                <img alt="Twitch logo" src="/static/img/icons/twitch.svg"/>
+                                <img alt="Twitch logo" src="/static/img/icons/light/twitch.svg"/>
                                 Shushie16
                             </div>
                         </div>
@@ -18,7 +18,7 @@ export default function Socials() {
                     <a href="https://youtube.shushie16.com" target="_blank" rel="noreferrer">
                         <div className="social-buttons youtube-button">
                             <div className="social-buttons-text">
-                                <img alt="Youtube logo" src="/static/img/icons/youtube.svg"/>
+                                <img alt="Youtube logo" src="/static/img/icons/light/youtube.svg"/>
                                 Shushie16 VODs
                             </div>
                         </div>
@@ -28,7 +28,7 @@ export default function Socials() {
                     <a href="https://twitter.shushie16.com" target="_blank" rel="noreferrer">
                         <div className="social-buttons twitter-button">
                             <div className="social-buttons-text">
-                                <img alt="Twitter logo" src="/static/img/icons/twitter.svg"/>
+                                <img alt="Twitter logo" src="/static/img/icons/light/twitter.svg"/>
                                 @Shushie_16
                             </div>
                         </div>
@@ -38,7 +38,7 @@ export default function Socials() {
                     <a href="https://instagram.shushie16.com" target="_blank" rel="noreferrer">
                         <div className="social-buttons instagram-button">
                             <div className="social-buttons-text">
-                                <img alt="Instagram logo" src="/static/img/icons/instagram.svg"/>
+                                <img alt="Instagram logo" src="/static/img/icons/light/instagram.svg"/>
                                 @Shushie_16
                             </div>
                         </div>

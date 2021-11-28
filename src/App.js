@@ -3,6 +3,7 @@ import './style.css';
 
 import Home from './pages/home/Home';
 import Notif from './compnents/Notif';
+import Footer from './pages/footer/Footer';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                     <Route path="/" element={<Home/>} />
                 </Routes>
             </Router>
+            <Footer/>
         </>
     );
 }

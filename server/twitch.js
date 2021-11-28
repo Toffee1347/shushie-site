@@ -14,7 +14,7 @@ export let channel = {
 }
 
 async function run() {
-    const twitchChannel = await twitch.getStreams({channel: 'tommyinnit'});
+    const twitchChannel = await twitch.getStreams({channel: 'harry'});
     const stream = twitchChannel.data[0];
     if (stream === undefined) {
         channel = {

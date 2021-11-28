@@ -21,7 +21,7 @@ body:hover::-webkit-scrollbar-thumb {
 }
 
 body {
-    background: linear-gradient(315deg, #DBD21D 0%, #cea426 100%) fixed;
+    background: linear-gradient(315deg, #FFEA61 0%, #FFD400 100%) fixed;
     overflow: hidden;
 }
 
@@ -30,18 +30,58 @@ body {
 }
 
 .notif-live {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     margin: 10px;
     padding: 5px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     border: solid grey 2px;
     z-index: 99999;
     max-width: 400px;
     max-height: 20vw;
     border-radius: 5px;
     box-sizing: border-box;
+    transition: height 0.5s;
+}
+.notif-live-inner {
+    position: relative;
+}
+.notif-live-text {
+    margin-right: 10px;
+    position: relative;
+    width: calc(90% - 10px);
+    float: left;
+}
+.notif-live-arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10%;
+    cursor: pointer;
+    height: 100%;
+    z-index: 2;
+}
+.notif-live-arrow-container {
+    position: absolute;
+    top: 48%;
+    right: 4%;
+    transform: translate(-50%, -50%);
+}
+#notifArrow {
+    transition: transform 0.5s;
+    display: block;
+    z-index: 1;
+}
+.notif-more-details {
+    display: none;
+    transition: all 0.5s ease-in;
+    transition-property: height;
+    min-height: 100%;
+}
+.notif-more-details-image {
+    width: 100%;
+    margin-top: 10px;
 }
 
 .center {
@@ -62,6 +102,14 @@ body {
     cursor: pointer;
     border-radius: 5px;
     margin: 5px; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.no-select {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -139,22 +187,7 @@ body {
 
 a {
     color: black;
-}
-
-@media only screen and (max-width: 899px) {
-    .notif-live {
-        max-width: unset;
-        width: calc(100vw - 20px);
-    }
-    .curve img {
-        height: 10vh;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .home-main-image {
-        width: 70vw;
-    }
+    text-decoration: none;
 }
 
 @keyframes up-down {
@@ -206,4 +239,38 @@ a {
     align-items: center;
     min-height: 100%;
     text-align: center;
+}
+
+.curved-corners {
+    border-radius: 5px;
+}
+
+.footer {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    padding-top: 40px;
+}
+.footer-social-icons {
+    padding: 10px;
+}
+
+@media only screen and (max-width: 899px) {
+    .notif-live {
+        max-width: unset;
+        width: calc(100vw - 20px);
+    }
+    .curve img {
+        height: 10vh;
+    }
+    .notif-live-arrow {
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .home-main-image {
+        width: 70vw;
+    }
 }
