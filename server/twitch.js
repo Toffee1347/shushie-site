@@ -14,17 +14,13 @@ export let channel = {
 }
 
 async function run() {
-    const twitchChannel = await twitch.getStreams({channel: 'harry'});
+    const twitchChannel = await twitch.getStreams({channel: 'Shushie16'});
     const stream = twitchChannel.data[0];
     if (stream === undefined) {
-        channel = {
-            live: false,
-            stats: {
-                viewers: 0,
-                title: '',
-                image: ''
-            },
-        }
+        channel.live = false;
+        channel.stats.viewers = 0;
+        channel.stats.title = '';
+        channel.stats.image = '';
         return;
     }
     if (stream.type === 'live') {

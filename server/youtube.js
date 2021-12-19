@@ -9,7 +9,9 @@ async function fetchVideos() {
         videos.push({
             title: item.snippet.title,
             id: item.snippet.resourceId.videoId,
-            thumbnail: item.snippet.thumbnails.medium.url
+            thumbnail: item.snippet.thumbnails.medium.url,
+            timestamp: new Date(item.snippet.publishedAt).getTime(),
+            description: item.snippet.description,
         });
     });
 }

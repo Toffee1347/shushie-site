@@ -5,7 +5,7 @@ function makeNotif(viewerCount, title, image) {
     preloadImg.src = image;
     return (
         <abbr title={title}>
-            <div className="notif-live">
+            <div className="notif-live" id="liveNotif">
                 <div className="notif-live-text">
                     <a target="_blank" rel="noreferrer" href="https://twitch.tv/shushie16">
                         <span style={{color: 'red'}}>&#128308;</span> I'm Live on twitch with {viewerCount} viewers, Come join and chat with us!
@@ -35,8 +35,10 @@ function toggle() {
         const imgHieght =  document.getElementById('notifMoreDetailsImage').getBoundingClientRect().height;
         const textHieght =  document.getElementById('notifMoreDetailsText').getBoundingClientRect().height;
         document.getElementById('notifMoreDetails').style.height = (10 + imgHieght + 16 + textHieght + 16) + 'px';
+        document.getElementById('liveNotif').setAttribute('opened', 'true');
     } else {
         document.getElementById('notifMoreDetails').style.height = '0px';
+        document.getElementById('liveNotif').setAttribute('opened', 'false');
     }
     setTimeout(() => {
         if (open) {

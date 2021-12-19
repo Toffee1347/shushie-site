@@ -20,7 +20,7 @@ export default function Footer() {
                     </a>
                     <br/>
                     <p>
-                        Website made by <a href="https://github.com/toffee1347" target="_blank" rel="noreferrer" style={{color: 'blue'}}>Toffee</a> with ❤️
+                        Website made by <a href="https://github.com/toffee1347" target="_blank" rel="noreferrer" style={{color: 'blue'}}>Toffee</a>
                     </p>
                 </div>
             </div>
